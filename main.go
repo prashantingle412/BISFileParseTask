@@ -159,7 +159,7 @@ func ShowDataById() {
 	}
 }
 func isUserExist(id string) (bool,error)  {
-	fmt.Println("(")
+	// fmt.Println("(")
 	collection = setCollection("task_db","task_collection")
 	usr,err := collection.Find(bson.M{"attendees_id":id}).Count()
 	if err != nil {
